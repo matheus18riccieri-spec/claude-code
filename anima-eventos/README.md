@@ -1,8 +1,9 @@
 # Anima Eventos — Landing Page
 
-Landing page animada para a **Anima Eventos**, empresa de decoração temática com heróis para
-festas. Site estático (HTML + CSS + JS puro, sem build), pensado para funcionar como uma
-extensão da página do Instagram (`@animaeventosms`).
+Landing page da **Anima Eventos**, empresa de organização, decoração e animação de festas
+premium em Campo Grande e todo o Mato Grosso do Sul. Site estático (HTML + CSS + JS puro,
+sem build), com design editorial (navy + vermelho + dourado, serifada) replicando o mockup
+de referência do cliente.
 
 ## Como visualizar localmente
 
@@ -18,47 +19,53 @@ Ou simplesmente abra `index.html` direto no navegador.
 
 ```
 anima-eventos/
-├── index.html              # página única com todas as seções
+├── index.html
 ├── css/style.css
-├── js/script.js            # monta os catálogos, galeria, lightbox, menu, animações
-└── assets/images/
-    ├── decoracao/           # 1.jpg .. 6.jpg — Catálogo 1 (pista de LED, DJ, photo booth, túnel de luz)
-    ├── carreta-furacao/     # 1.jpg .. 6.jpg — Catálogo 2 (personagens/mascotes de máscara)
-    ├── pelucias/            # 1.jpg .. 6.jpg — Catálogo 3 (mascotes de pelúcia)
-    ├── robos/               # 1.jpg .. 6.jpg — Catálogo 4 (robôs de LED)
-    └── logo-desenvolvedora/logo.png  # logo do rodapé (aguardando arquivo)
+├── js/script.js            # monta os grids de fotos, carrossel, lightbox, menu, animações
+└── assets/
+    ├── fonts/               # Playfair Display + Inter (self-hosted, sem depender de CDN)
+    └── images/
+        ├── decoracao/       # 1.jpg .. 6.jpg — Coleção 01
+        ├── carreta-furacao/ # 1.jpg .. 6.jpg — Coleção 02
+        ├── pelucias/        # 1.jpg .. 6.jpg — Coleção 03
+        ├── robos/           # 1.jpg .. 6.jpg — Coleção 04 (robôs de LED)
+        └── galeria/         # 1.jpg .. 8.jpg — fotos do carrossel "A festa vive para sempre"
 ```
 
-## Status do conteúdo
+## Seções da página
 
-- ✅ **Catálogo 1 — Decoração**: 6 fotos incluídas (pista de LED, DJ, túnel de luz, photo booth 360°).
-- ✅ **Catálogo 2 — Personagens da Carreta Furacão**: 6 fotos incluídas.
-- ✅ **Catálogo 3 — Pelúcias**: 6 fotos incluídas.
-- ✅ **Catálogo 4 — Robôs**: 6 fotos incluídas (robôs de LED).
-- ✏️ **Seção "Declarações" (depoimentos)**: seção de depoimentos de clientes entre o catálogo
-  de Pelúcias e o de Robôs, com 3 textos de exemplo bem marcados com
-  "✏️ Edite este depoimento...". Troque pelos depoimentos reais em `index.html`
-  (seção `<section id="depoimentos">`). Se "declarações" na verdade for outro grupo de fotos
-  de produto (ex: painéis/placas de declaração), me avise que eu troco a seção para um
-  catálogo de fotos igual aos outros.
-- ⏳ **Logo da desenvolvedora**: o rodapé já tem o espaço reservado. Basta salvar o arquivo
-  em `assets/images/logo-desenvolvedora/logo.png` (ou `.svg`, ajustando a extensão em
-  `index.html`) que ele aparece automaticamente no lugar do texto placeholder.
+1. **Hero** — "do jeito Anima", CTA para WhatsApp
+2. **Quem somos** — texto institucional + 3 destaques (festa do começo ao fim / todo o MS / padrão premium)
+3. **Estatísticas** — +10 anos, +500 eventos, 100% clientes satisfeitos, 24h atendimento
+4. **Serviços** — 14 cards (Organização de Eventos, Casamentos, Corporativos, Escolares,
+   Planejamento de Festas, Festas de 15 anos, Personagens Vivos, Heróis, Plataforma 360°,
+   Piso de LED, Túnel de LED, Sonorização, Ações Sociais, Muvies)
+5. **Galeria (carrossel)** — 8 fotos com legenda, navegação por setas
+6. **Catálogo de personagens** — 4 coleções (Decoração, Carreta Furacão, Pelúcias, Robôs de
+   LED), cada uma com CTA de reserva direto pro WhatsApp e grid de 6 fotos com legenda
+7. **Depoimentos** — 4 depoimentos ilustrativos (marcados como tal no subtítulo — trocar
+   pelos relatos reais quando disponíveis)
+8. **CTA final** — cartão navy→vermelho com botão dourado de WhatsApp
+9. **Contato** — endereço, WhatsApp, Instagram + mapa do Google Maps incorporado
+10. **Rodapé** — navegação, redes sociais, crédito "Desenvolvido por AceIt"
 
-Para adicionar/trocar fotos de qualquer catálogo no futuro, basta salvar o arquivo como
-`assets/images/<catalogo>/<numero>.jpg` (1 a 6) — o site detecta e exibe automaticamente,
-sem precisar editar nenhum código. Enquanto um arquivo não existe, aparece um placeholder
-"Aguardando imagem" no lugar dele.
+## Como trocar fotos
+
+Basta salvar o arquivo como `assets/images/<pasta>/<numero>.jpg` (numeração sequencial,
+1 em diante) — o site carrega automaticamente, sem precisar editar código. Se um arquivo
+não existir, a imagem simplesmente não aparece (sem placeholder quebrado).
 
 ## Contato usado no site
 
-- WhatsApp / telefone: **+55 67 9104 1770** (link `wa.me` montado a partir desse número)
+- WhatsApp: **+55 (67) 99104-1770** (atendimento 24h)
+- Endereço: Av. Rita Vieira de Andrade, 700 — Rita Vieira, Campo Grande - MS
 - Instagram: **[@animaeventosms](https://instagram.com/animaeventosms)**
 
-Para trocar, edite os links `https://wa.me/...` e `https://instagram.com/...` em
-`index.html` (aparecem no menu, no hero e na seção de contato).
+Para trocar, edite os links `https://wa.me/...`, o endereço e o link do Instagram em
+`index.html` (aparecem no hero, catálogos, CTA final e seção de contato).
 
-## Galeria
+## Observação sobre o mapa
 
-A seção "Galeria" mistura automaticamente todas as fotos dos 4 catálogos em um mosaico
-(vem do mesmo `js/script.js`, não precisa manter nada duplicado).
+O `<iframe>` do Google Maps na seção de Contato não carrega em ambientes de teste sem
+acesso à internet (como sandboxes de CI), mas funciona normalmente em qualquer navegador
+com internet — é o formato padrão de embed do Google Maps sem necessidade de API key.

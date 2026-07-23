@@ -3,268 +3,489 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Anima Eventos | Decorações Temáticas com Heróis</title>
-<meta name="description" content="Anima Eventos - decorações temáticas com heróis para festas inesquecíveis. Personagens da Carreta Furacão, pelúcias e robôs. Fale com a gente no WhatsApp!" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🦸%3C/text%3E%3C/svg%3E" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<title>Anima Eventos | Festas premium em todo o Mato Grosso do Sul</title>
+<meta name="description" content="Anima Eventos — organização, decoração e animação de festas premium em Campo Grande e todo o Mato Grosso do Sul. Personagens vivos, robôs de LED, piso de LED, plataforma 360° e muito mais." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+<!-- ===== ICON SPRITE ===== -->
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <g id="ic-stroke" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></g>
+  </defs>
+  <symbol id="icon-party" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5.8 11.3 3 21l9.7-2.8"/><path d="M13.5 3.5c1 2 2.7 3.3 5 4M10.5 6.5c.6 1.4 1.8 2.4 3.3 2.8M7.5 9.8c.4 1 1.2 1.8 2.2 2.1"/><path d="M4 21 15.5 9.5a2 2 0 0 1 2.9 0 2 2 0 0 1 0 2.9L7 21"/><circle cx="18.5" cy="4.5" r=".6" fill="currentColor" stroke="none"/><circle cx="21" cy="8" r=".6" fill="currentColor" stroke="none"/><circle cx="16.5" cy="14.5" r=".6" fill="currentColor" stroke="none"/></g></symbol>
+  <symbol id="icon-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20 10.5c0 5-8 11-8 11s-8-6-8-11a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="icon-award" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="5.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m8.3 12.8-1.6 8 5.3-2.6 5.3 2.6-1.6-8"/></symbol>
+  <symbol id="icon-calendar-heart" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3.5 9.5h17M8 3v3.5M16 3v3.5"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 16.8s-2.7-1.6-2.7-3.4a1.6 1.6 0 0 1 2.7-1.2 1.6 1.6 0 0 1 2.7 1.2c0 1.8-2.7 3.4-2.7 3.4Z"/></symbol>
+  <symbol id="icon-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 20s-7.5-4.6-9.8-9.8C.6 6.7 2.5 3.4 6 3c2.2-.3 4.2.9 6 3 1.8-2.1 3.8-3.3 6-3 3.5.4 5.4 3.7 3.8 7.2C19.5 15.4 12 20 12 20Z"/></symbol>
+  <symbol id="icon-briefcase" viewBox="0 0 24 24"><rect x="2.8" y="7.5" width="18.4" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M8.3 7.5V5.8a1.8 1.8 0 0 1 1.8-1.8h3.8a1.8 1.8 0 0 1 1.8 1.8V7.5"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="M2.8 13.2h18.4"/></symbol>
+  <symbol id="icon-grad" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 4 2 8.5 12 13l10-4.5Z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 10.8v4.6c0 1.4 2.7 2.6 6 2.6s6-1.2 6-2.6v-4.6M21 8.5V15"/></symbol>
+  <symbol id="icon-crown" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="m3 8 4 3 5-6 5 6 4-3-1.6 9.5H4.6Z"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="M5 20h14"/></symbol>
+  <symbol id="icon-sparkles" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M11 3c.5 2.8 1.2 3.5 4 4-2.8.5-3.5 1.2-4 4-.5-2.8-1.2-3.5-4-4 2.8-.5 3.5-1.2 4-4Z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M18 13c.3 1.6.7 2 2.3 2.3-1.6.3-2 .7-2.3 2.3-.3-1.6-.7-2-2.3-2.3 1.6-.3 2-.7 2.3-2.3Z"/></symbol>
+  <symbol id="icon-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 3.5 19 6v5.5c0 5-3 8-7 9-4-1-7-4-7-9V6Z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m9 12 2 2 4-4.3"/></symbol>
+  <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="icon-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="14.5" y="3.5" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="3.5" y="14.5" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="14.5" y="14.5" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="icon-tunnel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M3 20V11a9 9 0 0 1 18 0v9M7 20v-9a5 5 0 0 1 10 0v9"/></symbol>
+  <symbol id="icon-music" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 18V5.5l10-2v12.5"/><circle cx="6.5" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="16.5" cy="16" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="icon-handshake" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M2.5 12.5 6 9l3.3 3-1.6 1.6a1.3 1.3 0 0 0 1.8 1.8l3-3 1 1M13.5 9 17 5.5l4 4-4.3 4.3"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="m9.3 13.6 1 1a1.3 1.3 0 0 0 1.8-1.8M12 15.8a1.3 1.3 0 0 0 1.9-1.8l-.9-.9"/></symbol>
+  <symbol id="icon-film" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="M8 4.5v15M16 4.5v15M3 9h5M16 9h5M3 15h5M16 15h5"/></symbol>
+  <symbol id="icon-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6.5 3.5h3l1.5 4-2 1.7a12 12 0 0 0 5.8 5.8l1.7-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2Z"/></symbol>
+  <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="icon-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5.5h16v11H9l-4 3.5v-3.5H4Z"/></symbol>
+  <symbol id="icon-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.5 2.9 6 6.6.7-4.9 4.5 1.3 6.5L12 16.9l-5.9 3.3 1.3-6.5-4.9-4.5 6.6-.7Z"/></symbol>
+  <symbol id="icon-quote" viewBox="0 0 24 24"><path fill="currentColor" d="M4 10.5c0-3.6 2.2-6 5.6-6.8l.7 1.8c-2 .7-3 1.9-3.2 3.5.4-.2.9-.3 1.4-.3 1.7 0 3 1.3 3 3s-1.4 3.2-3.1 3.2C5.9 15 4 13.1 4 10.5Zm10 0c0-3.6 2.2-6 5.6-6.8l.7 1.8c-2 .7-3 1.9-3.2 3.5.4-.2.9-.3 1.4-.3 1.7 0 3 1.3 3 3s-1.4 3.2-3.1 3.2c-2.5 0-4.4-1.9-4.4-4.4Z"/></symbol>
+  <symbol id="icon-chevron-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 5 8 12l7 7"/></symbol>
+  <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M5 5l14 14M19 5 5 19"/></symbol>
+  <symbol id="icon-map-external" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 5H5.5a2 2 0 0 0-2 2V18a2 2 0 0 0 2 2H17a2 2 0 0 0 2-2v-3.5M13 4h6.5V10.5M19 4.5 11 12.5"/></symbol>
+</svg>
 
 <!-- ===== NAVBAR ===== -->
 <header class="navbar" id="navbar">
   <div class="container navbar__inner">
     <a href="#topo" class="navbar__brand">
-      <span class="navbar__brand-icon" aria-hidden="true">🦸</span>
-      <span class="navbar__brand-text">Anima <strong>Eventos</strong></span>
+      <span class="navbar__crest" aria-hidden="true">AE</span>
+      <span class="navbar__brand-text">Anima <em>Eventos</em></span>
     </a>
 
     <nav class="navbar__nav" id="navMenu">
+      <a href="#topo" class="navbar__link">Início</a>
       <a href="#sobre" class="navbar__link">Sobre</a>
-      <a href="#catalogo-decoracao" class="navbar__link">Decoração</a>
-      <a href="#catalogo-carreta" class="navbar__link">Carreta Furacão</a>
-      <a href="#catalogo-pelucias" class="navbar__link">Pelúcias</a>
-      <a href="#catalogo-robos" class="navbar__link">Robôs</a>
+      <a href="#servicos" class="navbar__link">Serviços</a>
       <a href="#galeria" class="navbar__link">Galeria</a>
       <a href="#contato" class="navbar__link">Contato</a>
     </nav>
 
-    <a href="https://wa.me/556791041770?text=Oi!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20as%20decora%C3%A7%C3%B5es%20da%20Anima%20Eventos!"
-       class="btn btn--whatsapp navbar__cta" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10 9 9.4 7.6 9.2 7c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5-1.3c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.3l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12 3.5 7.3 7.3 3.5 12 3.5S20.5 7.3 20.5 12 16.7 20.2 12 20.2z"/></svg>
-      WhatsApp
-    </a>
-
     <button class="navbar__burger" id="burgerBtn" aria-label="Abrir menu" aria-expanded="false">
-      <span></span><span></span><span></span>
+      <svg class="icon"><use href="#icon-menu"/></svg>
     </button>
   </div>
 </header>
 
 <!-- ===== HERO ===== -->
 <section class="hero" id="topo">
-  <div class="hero__bg" aria-hidden="true">
-    <span class="hero__shape hero__shape--1">⭐</span>
-    <span class="hero__shape hero__shape--2">💥</span>
-    <span class="hero__shape hero__shape--3">🎉</span>
-    <span class="hero__shape hero__shape--4">🦸‍♀️</span>
-    <span class="hero__shape hero__shape--5">✨</span>
-    <span class="hero__shape hero__shape--6">🤖</span>
-    <span class="hero__shape hero__shape--7">🧸</span>
-    <span class="hero__shape hero__shape--8">💫</span>
+  <div class="hero__decor" aria-hidden="true">
+    <span class="hero__fig hero__fig--1">🕷️</span>
+    <span class="hero__fig hero__fig--2">🦾</span>
+    <span class="hero__fig hero__fig--3">🛡️</span>
+    <span class="hero__fig hero__fig--4">💚</span>
   </div>
 
   <div class="container hero__content">
-    <p class="hero__eyebrow">Sua festa, seus heróis</p>
-    <h1 class="hero__title">
-      <span class="hero__title-line">ANIMA</span>
-      <span class="hero__title-line hero__title-line--pop">EVENTOS</span>
-    </h1>
-    <p class="hero__subtitle">
-      Decorações temáticas com heróis para transformar sua festa em uma aventura inesquecível.
-      Personagens, pelúcias e robôs cheios de energia para animar o seu evento!
+    <p class="badge">
+      <svg class="icon icon--sm"><use href="#icon-sparkles"/></svg>
+      Festas premium em todo o Mato Grosso do Sul
     </p>
+    <h1 class="hero__title">do jeito <em>Anima</em></h1>
+    <p class="hero__subtitle">Organização, decoração e animação de festas inesquecíveis — personagens vivos, robôs de LED e cenografia completa para o seu grande dia.</p>
+    <a href="#contato" class="btn btn--gold btn--lg">
+      Solicitar orçamento
+      <svg class="icon"><use href="#icon-chevron-right"/></svg>
+    </a>
+  </div>
+</section>
 
-    <div class="hero__cta">
-      <a href="https://wa.me/556791041770?text=Oi!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20as%20decora%C3%A7%C3%B5es%20da%20Anima%20Eventos!"
-         class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener">
-        Fale no WhatsApp
+<!-- ===== QUEM SOMOS ===== -->
+<section class="section reveal" id="sobre">
+  <div class="container sobre__grid">
+    <div>
+      <p class="eyebrow">Quem somos</p>
+      <h2 class="h2">A gente faz sua <em>festa acontecer</em>.</h2>
+      <p class="lead">A Anima Eventos nasceu em Campo Grande e atende todo o Mato Grosso do Sul, transformando datas importantes em festas inesquecíveis. Planejamos, decoramos, animamos e sonorizamos eventos de todos os portes — casamentos, 15 anos, aniversários, formaturas e confraternizações — com muita energia, criatividade e olhar apurado para cada detalhe.</p>
+    </div>
+    <div class="feature-list">
+      <div class="feature-pill">
+        <span class="feature-pill__icon"><svg class="icon"><use href="#icon-party"/></svg></span>
+        <span>Festa do começo ao fim</span>
+      </div>
+      <div class="feature-pill">
+        <span class="feature-pill__icon"><svg class="icon"><use href="#icon-pin"/></svg></span>
+        <span>Todo o Mato Grosso do Sul</span>
+      </div>
+      <div class="feature-pill">
+        <span class="feature-pill__icon"><svg class="icon"><use href="#icon-award"/></svg></span>
+        <span>Padrão premium</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="section section--tight reveal">
+  <div class="container stats__grid">
+    <div class="stat-card stat-card--dark">
+      <span class="stat-card__num">+10</span>
+      <span class="stat-card__label">anos de experiência</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-card__num stat-card__num--accent">+500</span>
+      <span class="stat-card__label">eventos realizados</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-card__num">100%</span>
+      <span class="stat-card__label">clientes satisfeitos</span>
+    </div>
+    <div class="stat-card stat-card--red">
+      <span class="stat-card__num">24h</span>
+      <span class="stat-card__label">atendimento dedicado</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVIÇOS ===== -->
+<section class="section reveal" id="servicos">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Serviços</p>
+      <h2 class="h2">Tudo que seu evento precisa, <em>em um só lugar</em>.</h2>
+      <p class="lead lead--center">Da concepção à animação, entregamos experiências completas com um olhar cuidadoso para cada detalhe.</p>
+    </div>
+
+    <div class="services__grid">
+      <div class="service-card">
+        <span class="icon-badge"><svg class="icon"><use href="#icon-calendar-heart"/></svg></span>
+        <h3>Organização de Eventos</h3>
+        <p>Planejamento completo do início ao fim, com curadoria de fornecedores e produção impecável.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon-badge"><svg class="icon"><use href="#icon-heart"/></svg></span>
+        <h3>Casamentos</h3>
+        <p>Cerimônias e recepções sob medida, com estética refinada e execução minuciosa.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon-badge"><svg class="icon"><use href="#icon-briefcase"/></svg></span>
+        <h3>Eventos Corporativos</h3>
+        <p>Confraternizações, lançamentos e convenções com padrão executivo.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon-badge"><svg class="icon"><use href="#icon-grad"/></svg></span>
+        <h3>Eventos Escolares</h3>
+        <p>Formaturas, colações e festas escolares memoráveis para todas as idades.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon-badge"><svg class="icon"><use href="#icon-party"/></svg></span>
+        <h3>Planejamento de Festas</h3>
+        <p>Aniversários, bodas e comemorações com identidade única.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon-badge"><svg class="icon"><use href="#icon-crown"/></svg></span>
+        <h3>Festas de 15 anos</h3>
+        <p>Debutantes com produção cinematográfica, coreografias e cenografia exclusiva.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon-badge"><svg class="icon"><use href="#icon-sparkles"/></svg></span>
+        <h3>Personagens Vivos</h3>
+        <p>Encanto e diversão com personagens infantis profissionais e uniformizados.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon-badge"><svg class="icon"><use href="#icon-shield"/></svg></span>
+        <h3>Heróis</h3>
+        <p>Super-heróis para animar aniversários com energia e segurança para as crianças.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon-badge"><svg class="icon"><use href="#icon-target"/></svg></span>
+        <h3>Plataforma 360°</h3>
+        <p>Vídeos giratórios em alta definição — a atração fotográfica do momento.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon-badge"><svg class="icon"><use href="#icon-grid"/></svg></span>
+        <h3>Piso de LED</h3>
+        <p>Pista iluminada interativa que transforma completamente o ambiente.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon-badge"><svg class="icon"><use href="#icon-tunnel"/></svg></span>
+        <h3>Túnel de LED</h3>
+        <p>Entrada dramática com efeitos luminosos programáveis.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon-badge"><svg class="icon"><use href="#icon-music"/></svg></span>
+        <h3>Sonorização Profissional</h3>
+        <p>Áudio de alto padrão, DJs e iluminação cênica calibrada para o espaço.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon-badge"><svg class="icon"><use href="#icon-handshake"/></svg></span>
+        <h3>Ações Sociais</h3>
+        <p>Produção de eventos beneficentes e institucionais com propósito.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon-badge"><svg class="icon"><use href="#icon-film"/></svg></span>
+        <h3>Muvies</h3>
+        <p>Registros audiovisuais e coberturas dinâmicas para eternizar cada momento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALERIA / CARROSSEL ===== -->
+<section class="section reveal" id="galeria">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="h2">A festa vive para <em>sempre</em>.</h2>
+      <p class="lead lead--center">Um recorte das festas produzidas pela Anima Eventos em todo o Mato Grosso do Sul. Troque essas fotos a qualquer momento em <code>assets/images/galeria/</code>.</p>
+    </div>
+
+    <div class="carousel">
+      <div class="carousel__nav">
+        <button class="carousel__btn" id="carPrev" aria-label="Foto anterior">
+          <svg class="icon"><use href="#icon-chevron-left"/></svg>
+        </button>
+        <button class="carousel__btn carousel__btn--active" id="carNext" aria-label="Próxima foto">
+          <svg class="icon"><use href="#icon-chevron-right"/></svg>
+        </button>
+      </div>
+      <div class="carousel__track" id="carouselTrack"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATÁLOGO DE PERSONAGENS ===== -->
+<section class="section reveal" id="catalogo">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Catálogo de personagens</p>
+      <h2 class="h2">Conheça nossas <em>atrações</em></h2>
+      <p class="lead lead--center">Escolha os personagens vivos que vão animar o seu evento. Combinações completas, figurinos originais e muita interação com o público.</p>
+    </div>
+
+    <!-- Coleção 01 -->
+    <div class="collection">
+      <div class="collection__info">
+        <p class="collection__kicker">Coleção 01</p>
+        <h3 class="collection__title">Carreta Furacão</h3>
+        <p class="collection__desc">Fofão, Máscara, Chapolin e turma completa para arrancar risadas e agitar a pista.</p>
+        <a class="btn btn--dark" href="https://wa.me/5567991041770?text=Oi!%20Quero%20reservar%20a%20Carreta%20Furac%C3%A3o%20para%20minha%20festa." target="_blank" rel="noopener">
+          <svg class="icon"><use href="#icon-chat"/></svg>
+          Reservar Carreta
+        </a>
+      </div>
+      <div class="photo-grid" data-catalog="carreta-furacao" data-count="6"
+           data-captions="Fofão, Super-Homem e Homem-Aranha animando a festa|Homem-Aranha e Máscara arrancando risadas|Turma do Chaves e Roblox animando a criançada|Máscara, noiva e Chucky no clima da festa|Máscara e Chucky agitando a pista|Chapolin e Máscara no Colégio Status"></div>
+    </div>
+
+    <!-- Coleção 02 -->
+    <div class="collection">
+      <div class="collection__info">
+        <p class="collection__kicker">Coleção 02</p>
+        <h3 class="collection__title">Decoração</h3>
+        <p class="collection__desc">Túnel de LED, piso de LED estrelado, plataforma 360° e iluminação cênica profissional para transformar o ambiente do seu evento.</p>
+        <a class="btn btn--dark" href="https://wa.me/5567991041770?text=Oi!%20Quero%20reservar%20a%20Decora%C3%A7%C3%A3o%20para%20minha%20festa." target="_blank" rel="noopener">
+          <svg class="icon"><use href="#icon-chat"/></svg>
+          Reservar Decoração
+        </a>
+      </div>
+      <div class="photo-grid" data-catalog="decoracao" data-count="6"
+           data-captions="Moving head profissional com feixe vermelho|Plataforma 360° em ação na festa|Pista de LED com iluminação cênica|Túnel de LED azul iluminado para entrada|DJ Carlos com bancada iluminada|Pista de LED estrelada com globos espelhados"></div>
+    </div>
+
+    <!-- Coleção 03 -->
+    <div class="collection">
+      <div class="collection__info">
+        <p class="collection__kicker">Coleção 03</p>
+        <h3 class="collection__title">Pelúcias</h3>
+        <p class="collection__desc">Mickey, Minnie, Olaf, Sonic, Patrulha Canina e muito mais — pelúcias gigantes que encantam a criançada.</p>
+        <a class="btn btn--dark" href="https://wa.me/5567991041770?text=Oi!%20Quero%20reservar%20as%20Pel%C3%BAcias%20para%20minha%20festa." target="_blank" rel="noopener">
+          <svg class="icon"><use href="#icon-chat"/></svg>
+          Reservar Pelúcias
+        </a>
+      </div>
+      <div class="photo-grid" data-catalog="pelucias" data-count="6"
+           data-captions="Stitch — pelúcia gigante temática espacial|Sonic — pelúcia para festas temáticas|Olaf — pelúcia gigante para festas|Chase e Skye da Patrulha Canina|Mickey e Minnie em festa de aniversário|Marshall e Skye da Patrulha Canina"></div>
+    </div>
+
+    <!-- Coleção 04 -->
+    <div class="collection">
+      <div class="collection__info">
+        <p class="collection__kicker">Coleção 04</p>
+        <h3 class="collection__title">Robôs de LED</h3>
+        <p class="collection__desc">Robôs gigantes iluminados com LED — presença marcante em casamentos, 15 anos, aniversários e ações promocionais.</p>
+        <a class="btn btn--dark" href="https://wa.me/5567991041770?text=Oi!%20Quero%20reservar%20os%20Rob%C3%B4s%20de%20LED%20para%20minha%20festa." target="_blank" rel="noopener">
+          <svg class="icon"><use href="#icon-chat"/></svg>
+          Reservar Robôs
+        </a>
+      </div>
+      <div class="photo-grid" data-catalog="robos" data-count="6"
+           data-captions="Robô de LED encantando a criançada|Dupla de robôs de LED — cenário Murano Buffet|Robôs de LED posando com os aniversariantes|Robô de LED iluminado à noite|Robô sobre pernas de pau em ação promocional|Robô de LED verde — festa de 15 anos"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DEPOIMENTOS ===== -->
+<section class="section section--muted reveal" id="depoimentos">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Depoimentos</p>
+      <h2 class="h2">O que nossos <em>clientes</em> dizem</h2>
+      <p class="lead lead--center">Depoimentos ilustrativos. Poderão ser substituídos pelos relatos reais dos seus clientes.</p>
+    </div>
+
+    <div class="testimonials__grid">
+      <blockquote class="testimonial-card">
+        <div class="testimonial-card__top">
+          <span class="stars" aria-hidden="true">
+            <svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg>
+          </span>
+          <svg class="icon testimonial-card__quote"><use href="#icon-quote"/></svg>
+        </div>
+        <p>"A Anima entregou muito além do que sonhamos. Cada detalhe foi impecável e nossos convidados ainda comentam da festa."</p>
+        <footer><strong>Marina &amp; Rafael</strong><span>Casamento</span></footer>
+      </blockquote>
+
+      <blockquote class="testimonial-card">
+        <div class="testimonial-card__top">
+          <span class="stars" aria-hidden="true">
+            <svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg>
+          </span>
+          <svg class="icon testimonial-card__quote"><use href="#icon-quote"/></svg>
+        </div>
+        <p>"Uma noite mágica! A plataforma 360 e o túnel de LED foram o ponto alto da festa. Equipe atenciosa e profissional."</p>
+        <footer><strong>Camila Souza</strong><span>15 anos da Sofia</span></footer>
+      </blockquote>
+
+      <blockquote class="testimonial-card">
+        <div class="testimonial-card__top">
+          <span class="stars" aria-hidden="true">
+            <svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg>
+          </span>
+          <svg class="icon testimonial-card__quote"><use href="#icon-quote"/></svg>
+        </div>
+        <p>"Organização impecável, cronograma respeitado e qualidade de produção acima da média. Recomendamos sem hesitar."</p>
+        <footer><strong>Grupo Vertex</strong><span>Confraternização Corporativa</span></footer>
+      </blockquote>
+
+      <blockquote class="testimonial-card">
+        <div class="testimonial-card__top">
+          <span class="stars" aria-hidden="true">
+            <svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg>
+          </span>
+          <svg class="icon testimonial-card__quote"><use href="#icon-quote"/></svg>
+        </div>
+        <p>"Do planejamento à execução, tudo caminhou com leveza. Os alunos e famílias saíram encantados."</p>
+        <footer><strong>Escola Aurora</strong><span>Formatura</span></footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA FINAL ===== -->
+<section class="section reveal">
+  <div class="container">
+    <div class="cta-final">
+      <p class="eyebrow eyebrow--onDark">Vamos criar juntos</p>
+      <h2 class="h2 h2--onDark">Vamos transformar seu evento em um <em>momento inesquecível</em>?</h2>
+      <p class="cta-final__text">Conte-nos sobre seu sonho. Nossa equipe responde rapidamente pelo WhatsApp com uma proposta personalizada, sem compromisso.</p>
+      <a class="btn btn--gold btn--lg" href="https://wa.me/5567991041770?text=Oi!%20Vim%20pelo%20site%20e%20quero%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+        <svg class="icon"><use href="#icon-chat"/></svg>
+        Solicitar orçamento pelo WhatsApp
       </a>
-      <a href="https://instagram.com/animaeventosms" class="btn btn--outline btn--lg" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 2c2.7 0 3.1 0 4.1.1 1 .1 1.7.2 2.3.5.6.3 1.1.6 1.6 1.1.5.5.8 1 1.1 1.6.2.6.4 1.3.5 2.3.1 1 .1 1.4.1 4.1s0 3.1-.1 4.1c-.1 1-.2 1.7-.5 2.3-.3.6-.6 1.1-1.1 1.6-.5.5-1 .8-1.6 1.1-.6.2-1.3.4-2.3.5-1 .1-1.4.1-4.1.1s-3.1 0-4.1-.1c-1-.1-1.7-.2-2.3-.5-.6-.3-1.1-.6-1.6-1.1-.5-.5-.8-1-1.1-1.6-.2-.6-.4-1.3-.5-2.3C2 15.1 2 14.7 2 12s0-3.1.1-4.1c.1-1 .2-1.7.5-2.3.3-.6.6-1.1 1.1-1.6.5-.5 1-.8 1.6-1.1.6-.2 1.3-.4 2.3-.5C8.9 2 9.3 2 12 2zm0 1.8c-2.6 0-3 0-4 .1-.9.1-1.4.2-1.7.3-.4.2-.7.4-1 .7-.3.3-.5.6-.7 1-.1.3-.3.8-.3 1.7-.1 1-.1 1.4-.1 4s0 3 .1 4c.1.9.2 1.4.3 1.7.2.4.4.7.7 1 .3.3.6.5 1 .7.3.1.8.3 1.7.3 1 .1 1.4.1 4 .1s3 0 4-.1c.9-.1 1.4-.2 1.7-.3.4-.2.7-.4 1-.7.3-.3.5-.6.7-1 .1-.3.3-.8.3-1.7.1-1 .1-1.4.1-4s0-3-.1-4c-.1-.9-.2-1.4-.3-1.7-.2-.4-.4-.7-.7-1-.3-.3-.6-.5-1-.7-.3-.1-.8-.3-1.7-.3-1-.1-1.4-.1-4-.1z"/><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4z"/><circle cx="17.4" cy="6.6" r="1.2"/></svg>
-        @animaeventosms
-      </a>
     </div>
-  </div>
-
-  <a href="#sobre" class="hero__scroll" aria-label="Rolar para baixo">
-    <svg viewBox="0 0 24 24" class="icon"><path d="M12 16.5l-8-8 1.4-1.4L12 13.7l6.6-6.6L20 8.5z"/></svg>
-  </a>
-</section>
-
-<!-- ===== SOBRE ===== -->
-<section class="sobre reveal" id="sobre">
-  <div class="container sobre__inner">
-    <div class="sobre__badge">💥 POW!</div>
-    <h2 class="section-title">Festas com superpoderes</h2>
-    <p class="sobre__text">
-      A <strong>Anima Eventos</strong> é especialista em decoração temática com heróis para
-      aniversários e festas inesquecíveis. Montamos a estrutura completa — pista de LED, DJ,
-      photo booth 360° e túnel de luz — e levamos personagens da Carreta Furacão, pelúcias
-      fofíssimas e robôs de LED super animados para deixar a festa da sua família com a cara
-      da criançada. Cada detalhe é pensado para criar aquele momento "uau" no evento!
-    </p>
-    <div class="sobre__stats">
-      <div class="sobre__stat">
-        <span class="sobre__stat-num">🎈</span>
-        <span class="sobre__stat-label">Decoração completa</span>
-      </div>
-      <div class="sobre__stat">
-        <span class="sobre__stat-num">🦸</span>
-        <span class="sobre__stat-label">Temas de heróis</span>
-      </div>
-      <div class="sobre__stat">
-        <span class="sobre__stat-num">🤖</span>
-        <span class="sobre__stat-label">Robôs de LED</span>
-      </div>
-      <div class="sobre__stat">
-        <span class="sobre__stat-num">📸</span>
-        <span class="sobre__stat-label">Photo booth 360°</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CATÁLOGO 1: DECORAÇÃO ===== -->
-<section class="catalog reveal" id="catalogo-decoracao">
-  <div class="container">
-    <div class="catalog__header">
-      <span class="catalog__kicker">Catálogo 01</span>
-      <h2 class="section-title">Decoração</h2>
-      <p class="catalog__desc">Pista de LED, túnel de luz, cabine de DJ e photo booth 360° para transformar o espaço da sua festa.</p>
-    </div>
-
-    <div class="catalog__grid" data-catalog="decoracao" data-count="6"></div>
-  </div>
-</section>
-
-<!-- ===== CATÁLOGO 2: CARRETA FURACÃO ===== -->
-<section class="catalog reveal" id="catalogo-carreta">
-  <div class="container">
-    <div class="catalog__header">
-      <span class="catalog__kicker">Catálogo 02</span>
-      <h2 class="section-title">Personagens da Carreta Furacão</h2>
-      <p class="catalog__desc">Os personagens queridinhos da criançada, prontos para animar a decoração da sua festa.</p>
-    </div>
-
-    <div class="catalog__grid" data-catalog="carreta-furacao" data-count="6"></div>
-  </div>
-</section>
-
-<!-- ===== CATÁLOGO 3: PELÚCIAS ===== -->
-<section class="catalog catalog--alt reveal" id="catalogo-pelucias">
-  <div class="container">
-    <div class="catalog__header">
-      <span class="catalog__kicker">Catálogo 03</span>
-      <h2 class="section-title">Pelúcias</h2>
-      <p class="catalog__desc">Pelúcias fofinhas para completar a decoração e encantar a criançada.</p>
-    </div>
-
-    <div class="catalog__grid" data-catalog="pelucias" data-count="6"></div>
-  </div>
-</section>
-
-<!-- ===== DEPOIMENTOS / DECLARAÇÕES ===== -->
-<section class="depoimentos reveal" id="depoimentos">
-  <div class="container">
-    <div class="catalog__header">
-      <span class="catalog__kicker">Declarações</span>
-      <h2 class="section-title">Quem já viveu essa aventura</h2>
-      <p class="catalog__desc">
-        ✏️ Espaço reservado para depoimentos reais de clientes — substitua os textos de exemplo abaixo.
-      </p>
-    </div>
-
-    <div class="depoimentos__grid">
-      <blockquote class="depoimento-card">
-        <p>"✏️ Edite este depoimento com a fala real do cliente aqui."</p>
-        <footer>— Nome do cliente (exemplo)</footer>
-      </blockquote>
-      <blockquote class="depoimento-card">
-        <p>"✏️ Edite este depoimento com a fala real do cliente aqui."</p>
-        <footer>— Nome do cliente (exemplo)</footer>
-      </blockquote>
-      <blockquote class="depoimento-card">
-        <p>"✏️ Edite este depoimento com a fala real do cliente aqui."</p>
-        <footer>— Nome do cliente (exemplo)</footer>
-      </blockquote>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CATÁLOGO 4: ROBÔS ===== -->
-<section class="catalog catalog--alt reveal" id="catalogo-robos">
-  <div class="container">
-    <div class="catalog__header">
-      <span class="catalog__kicker">Catálogo 04</span>
-      <h2 class="section-title">Robôs</h2>
-      <p class="catalog__desc">Robôs super animados para dar aquele toque futurista e divertido na festa.</p>
-    </div>
-
-    <div class="catalog__grid" data-catalog="robos" data-count="6"></div>
-  </div>
-</section>
-
-<!-- ===== GALERIA ===== -->
-<section class="galeria reveal" id="galeria">
-  <div class="container">
-    <div class="catalog__header">
-      <span class="catalog__kicker">Galeria</span>
-      <h2 class="section-title">Um pouco de cada aventura</h2>
-      <p class="catalog__desc">Mosaico com fotos de todos os catálogos.</p>
-    </div>
-
-    <div class="galeria__grid" id="galeriaGrid"></div>
   </div>
 </section>
 
 <!-- ===== CONTATO ===== -->
-<section class="contato reveal" id="contato">
-  <div class="container contato__inner">
-    <div class="contato__bg-shape" aria-hidden="true">🎊</div>
-    <h2 class="section-title section-title--light">Vamos animar sua festa?</h2>
-    <p class="contato__text">Fale com a gente e monte a decoração dos sonhos da sua criançada.</p>
+<section class="section reveal" id="contato">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Contato</p>
+      <h2 class="h2">Fale com a <em>Anima</em></h2>
+      <p class="lead lead--center">Estamos prontos para tornar seu evento inesquecível. Escolha o canal mais confortável.</p>
+    </div>
 
-    <div class="contato__cards">
-      <a class="contato__card" href="https://wa.me/556791041770?text=Oi!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20as%20decora%C3%A7%C3%B5es%20da%20Anima%20Eventos!" target="_blank" rel="noopener">
-        <span class="contato__card-icon">📱</span>
-        <span class="contato__card-label">WhatsApp / Telefone</span>
-        <span class="contato__card-value">+55 67 9104 1770</span>
+    <div class="contact__grid">
+      <div class="contact-card">
+        <span class="icon-badge"><svg class="icon"><use href="#icon-pin"/></svg></span>
+        <div>
+          <p class="contact-card__label">Endereço</p>
+          <p class="contact-card__value">Av. Rita Vieira de Andrade, 700 — Rita Vieira, Campo Grande - MS</p>
+          <p class="contact-card__hint">Atendemos todo o Mato Grosso do Sul</p>
+        </div>
+      </div>
+
+      <a class="contact-card" href="https://wa.me/5567991041770" target="_blank" rel="noopener">
+        <span class="icon-badge"><svg class="icon"><use href="#icon-phone"/></svg></span>
+        <div>
+          <p class="contact-card__label">WhatsApp</p>
+          <p class="contact-card__value">+55 (67) 99104-1770</p>
+          <p class="contact-card__hint">Atendimento 24 horas</p>
+        </div>
       </a>
-      <a class="contato__card" href="https://instagram.com/animaeventosms" target="_blank" rel="noopener">
-        <span class="contato__card-icon">📷</span>
-        <span class="contato__card-label">Instagram</span>
-        <span class="contato__card-value">@animaeventosms</span>
+
+      <a class="contact-card" href="https://instagram.com/animaeventosms" target="_blank" rel="noopener">
+        <span class="icon-badge"><svg class="icon"><use href="#icon-instagram"/></svg></span>
+        <div>
+          <p class="contact-card__label">Instagram</p>
+          <p class="contact-card__value">@animaeventosms</p>
+        </div>
       </a>
+    </div>
+
+    <div class="map-card">
+      <a class="map-card__link" href="https://www.google.com/maps/search/?api=1&query=Av.+Rita+Vieira+de+Andrade%2C+700%2C+Campo+Grande+-+MS" target="_blank" rel="noopener">
+        Abrir no Maps <svg class="icon icon--sm"><use href="#icon-map-external"/></svg>
+      </a>
+      <iframe
+        title="Localização da Anima Eventos"
+        src="https://www.google.com/maps?q=Av.+Rita+Vieira+de+Andrade,+700,+Campo+Grande+-+MS&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </div>
 </section>
 
 <!-- ===== LIGHTBOX ===== -->
 <div class="lightbox" id="lightbox">
-  <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">✕</button>
+  <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">
+    <svg class="icon"><use href="#icon-close"/></svg>
+  </button>
   <div class="lightbox__content" id="lightboxContent"></div>
 </div>
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
-  <div class="container footer__inner">
-    <div class="footer__brand">
-      <span class="hero__shape" aria-hidden="true">🦸</span>
-      <span>Anima <strong>Eventos</strong></span>
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="#topo" class="navbar__brand">
+          <span class="navbar__crest" aria-hidden="true">AE</span>
+          <span class="navbar__brand-text">Anima <em>Eventos</em></span>
+        </a>
+        <p>Organização, produção e animação de festas premium em todo o Mato Grosso do Sul.</p>
+      </div>
+
+      <nav class="footer__nav">
+        <a href="#topo">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="footer__social">
+        <a href="https://instagram.com/animaeventosms" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use href="#icon-instagram"/></svg></a>
+        <a href="https://wa.me/5567991041770" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon"><use href="#icon-chat"/></svg></a>
+      </div>
     </div>
 
-    <div class="footer__links">
-      <a href="https://wa.me/556791041770" target="_blank" rel="noopener">WhatsApp</a>
-      <a href="https://instagram.com/animaeventosms" target="_blank" rel="noopener">Instagram</a>
-      <a href="#topo">Voltar ao topo ↑</a>
-    </div>
+    <div class="footer__divider"></div>
 
     <p class="footer__copy">© <span id="year"></span> Anima Eventos. Todos os direitos reservados.</p>
 
     <div class="footer__dev">
       <span class="footer__dev-label">Desenvolvido por</span>
-      <img
-        src="assets/images/logo-desenvolvedora/logo.png"
-        alt="Logo da desenvolvedora"
-        class="footer__dev-logo"
-        onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'footer__dev-placeholder',textContent:'Logo da desenvolvedora'}))"
-      />
+      <span class="footer__dev-logo">
+        <svg class="icon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M12 3.5 21 19H3Z"/></svg>
+        AceIt
+      </span>
     </div>
   </div>
 </footer>
+
+<button class="whatsapp-float" id="whatsappFloat" aria-label="Falar no WhatsApp">
+  <svg class="icon"><use href="#icon-chat"/></svg>
+</button>
 
 <script src="js/script.js"></script>
 </body>
