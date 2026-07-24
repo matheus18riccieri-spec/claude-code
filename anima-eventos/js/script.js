@@ -39,9 +39,9 @@ const GALERIA_CAPTIONS = [
   "Dupla animando ação social",
   "Mickey e Minnie com a aniversariante",
   "Robôs de LED com os convidados",
-  "Máscara, noiva e Chucky no clima da festa",
+  "Máscara, noiva e Fofão no clima da festa",
   "Homem-Aranha e a turma animando o aniversário de 3 aninhos",
-  "Máscara e Chucky agitando a pista",
+  "Máscara e Fofão agitando a pista",
   "Debutante em piso de LED estrelado",
 ];
 
