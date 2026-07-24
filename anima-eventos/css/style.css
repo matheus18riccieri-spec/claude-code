@@ -149,6 +149,23 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
   .reveal { animation: none; }
 }
 
+/* Word-by-word heading reveal. Words are visible (opacity:1) by default —
+   the .words-in trigger class (added by IntersectionObserver) is a pure
+   enhancement: if it never fires, headings stay fully visible, just
+   without the staggered pop-in. */
+.word-pop { display: inline-block; opacity: 1; }
+@keyframes word-pop-in {
+  from { opacity: 0; transform: translateY(.3em); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.words-trigger.words-in .word-pop {
+  animation: word-pop-in .5s cubic-bezier(.2,.8,.2,1) both;
+  animation-delay: calc(var(--word-i, 0) * 45ms);
+}
+@media (prefers-reduced-motion: reduce) {
+  .words-trigger.words-in .word-pop { animation: none; }
+}
+
 /* ============ BUTTONS ============ */
 .btn {
   display: inline-flex;

@@ -49,13 +49,29 @@ function buildCarousel() {
   const track = document.getElementById("carouselTrack");
   if (!track) return;
 
-  GALERIA_CAPTIONS.forEach((caption, idx) => {
-    track.appendChild(buildPhotoCard(`assets/images/galeria/${idx + 1}.jpg`, caption));
-  });
+  // Three copies (clone + real + clone) so the track can loop infinitely:
+  // when scroll drifts into a clone set, we silently snap back to the
+  // equivalent spot in the real (middle) set.
+  for (let rep = 0; rep < 3; rep++) {
+    GALERIA_CAPTIONS.forEach((caption, idx) => {
+      track.appendChild(buildPhotoCard(`assets/images/galeria/${idx + 1}.jpg`, caption));
+    });
+  }
 
   const prevBtn = document.getElementById("carPrev");
   const nextBtn = document.getElementById("carNext");
-  const scrollAmount = () => track.querySelector(".carousel-card")?.offsetWidth + 20 || 340;
+
+  let setWidth = 0;
+  function measure() {
+    setWidth = track.scrollWidth / 3;
+  }
+  measure();
+  track.scrollLeft = setWidth;
+
+  function scrollAmount() {
+    const first = track.querySelector(".carousel-card");
+    return (first?.offsetWidth || 320) + 20;
+  }
 
   prevBtn?.addEventListener("click", () => {
     track.scrollBy({ left: -scrollAmount(), behavior: "smooth" });
@@ -64,14 +80,25 @@ function buildCarousel() {
     track.scrollBy({ left: scrollAmount(), behavior: "smooth" });
   });
 
-  function updateNavState() {
-    const atStart = track.scrollLeft <= 4;
-    const atEnd = track.scrollLeft >= track.scrollWidth - track.clientWidth - 4;
-    prevBtn?.classList.toggle("carousel__btn--active", !atStart);
-    nextBtn?.classList.toggle("carousel__btn--active", !atEnd);
-  }
-  track.addEventListener("scroll", updateNavState);
-  updateNavState();
+  let tick = null;
+  track.addEventListener("scroll", () => {
+    if (tick) return;
+    tick = requestAnimationFrame(() => {
+      tick = null;
+      if (setWidth <= 0) return;
+      if (track.scrollLeft < setWidth * 0.5) {
+        track.scrollLeft += setWidth;
+      } else if (track.scrollLeft > setWidth * 1.5) {
+        track.scrollLeft -= setWidth;
+      }
+    });
+  });
+
+  window.addEventListener("resize", () => {
+    const ratio = setWidth > 0 ? track.scrollLeft / setWidth : 1;
+    measure();
+    track.scrollLeft = setWidth * ratio;
+  });
 }
 
 // ============ LIGHTBOX ============
@@ -114,6 +141,63 @@ navMenu?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => navMenu.classList.remove("is-open"));
 });
 
+// ============ WORD-BY-WORD HEADING REVEAL ============
+function wrapWordsForAnimation(el) {
+  el.classList.add("words-trigger");
+  let wordIndex = 0;
+
+  function processNode(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const parts = node.textContent.split(/(\s+)/);
+      const frag = document.createDocumentFragment();
+      parts.forEach((chunk) => {
+        if (!chunk.trim()) {
+          frag.appendChild(document.createTextNode(chunk));
+          return;
+        }
+        const span = document.createElement("span");
+        span.className = "word-pop";
+        span.style.setProperty("--word-i", String(wordIndex));
+        span.textContent = chunk;
+        frag.appendChild(span);
+        wordIndex++;
+      });
+      node.replaceWith(frag);
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+      Array.from(node.childNodes).forEach(processNode);
+    }
+  }
+
+  Array.from(el.childNodes).forEach(processNode);
+}
+
+function setupWordReveal() {
+  const targets = document.querySelectorAll(".h2, .hero__title");
+  if (!targets.length) return;
+
+  targets.forEach((el) => wrapWordsForAnimation(el));
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("words-in");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.4 },
+  );
+  targets.forEach((el) => observer.observe(el));
+
+  // Safety net: if for any reason the observer never fires for a
+  // heading (e.g. it's already been scrolled past on load), reveal it
+  // anyway after a short delay so text is never stuck without the class.
+  setTimeout(() => {
+    targets.forEach((el) => el.classList.add("words-in"));
+  }, 2500);
+}
+
 // ============ FOOTER YEAR ============
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
@@ -121,3 +205,4 @@ if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 // ============ INIT ============
 buildPhotoGrids();
 buildCarousel();
+setupWordReveal();
