@@ -114,20 +114,6 @@ navMenu?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => navMenu.classList.remove("is-open"));
 });
 
-// ============ SCROLL REVEAL ============
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.1 },
-);
-document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
-
 // ============ FOOTER YEAR ============
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
