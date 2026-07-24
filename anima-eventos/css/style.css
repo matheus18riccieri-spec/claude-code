@@ -139,8 +139,15 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 .section--muted { background: var(--bg-soft); }
 
 /* ============ REVEAL ============ */
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.is-visible { opacity: 1; transform: translateY(0); }
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal { animation: fade-up .8s ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { animation: none; }
+}
 
 /* ============ BUTTONS ============ */
 .btn {
@@ -231,15 +238,31 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 .hero__decor { position: absolute; inset: 0; pointer-events: none; }
 .hero__fig {
   position: absolute;
-  font-size: 2.4rem;
-  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,.55);
   animation: hero-float 6s ease-in-out infinite;
-  filter: drop-shadow(0 8px 14px rgba(16,27,48,.15));
+  box-shadow: 0 10px 22px -6px rgba(16,27,48,.35);
 }
-.hero__fig--1 { top: 20%; left: 10%; animation-delay: 0s; }
-.hero__fig--2 { top: 24%; right: 9%; animation-delay: .8s; }
-.hero__fig--3 { bottom: 16%; left: 14%; animation-delay: 1.6s; }
-.hero__fig--4 { bottom: 20%; right: 13%; animation-delay: 2.4s; }
+.hero__fig .icon { width: 30px; height: 30px; }
+.hero__fig--spider { background: radial-gradient(circle at 35% 30%, #c8321f, #7a1c10); }
+.hero__fig--iron { background: radial-gradient(circle at 35% 30%, #b3271c, #6e150e); }
+.hero__fig--cap { background: radial-gradient(circle at 35% 30%, #2f4fb0, #1c2f70); }
+.hero__fig--hulk { background: radial-gradient(circle at 35% 30%, #3f8f4f, #1f5a2c); }
+.hero__fig--1 { top: 14%; left: 6%; animation-delay: 0s; }
+.hero__fig--2 { top: 14%; right: 6%; animation-delay: .8s; }
+.hero__fig--3 { bottom: 8%; left: 6%; animation-delay: 1.6s; }
+.hero__fig--4 { bottom: 8%; right: 6%; animation-delay: 2.4s; }
+@media (max-width: 640px) {
+  .hero__fig { width: 44px; height: 44px; }
+  .hero__fig .icon { width: 20px; height: 20px; }
+  .hero__fig--1, .hero__fig--2 { top: 4%; }
+  .hero__fig--3, .hero__fig--4 { bottom: 2%; }
+}
 @keyframes hero-float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-18px); }

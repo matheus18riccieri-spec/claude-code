@@ -41,6 +41,10 @@
   <symbol id="icon-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></symbol>
   <symbol id="icon-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M5 5l14 14M19 5 5 19"/></symbol>
   <symbol id="icon-map-external" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 5H5.5a2 2 0 0 0-2 2V18a2 2 0 0 0 2 2H17a2 2 0 0 0 2-2v-3.5M13 4h6.5V10.5M19 4.5 11 12.5"/></symbol>
+  <symbol id="hero-spider" viewBox="0 0 24 24"><g fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M12 8.5v8M12 8.5 8 5M12 8.5l4-3.5M12 11l-6.5-1M12 11l6.5-1M12 13.5l-6 2M12 13.5l6 2M8.5 5.5l-3-2M15.5 5.5l3-2"/></g><circle cx="12" cy="8.3" r="2.6" fill="#fff"/></symbol>
+  <symbol id="hero-shield" viewBox="0 0 24 24"><path fill="#fff" d="M12 3.2 19.5 6v5.3c0 5-3.2 8.2-7.5 9.3-4.3-1.1-7.5-4.3-7.5-9.3V6Z"/><circle cx="12" cy="11.5" r="4.4" fill="#3555d1"/><path fill="#fff" d="m12 8.2 1 2.1 2.3.3-1.7 1.6.4 2.3-2-1.1-2 1.1.4-2.3-1.7-1.6 2.3-.3Z"/></symbol>
+  <symbol id="hero-arc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="#ffd76b" stroke-width="1.6"/><circle cx="12" cy="12" r="5" fill="none" stroke="#ffd76b" stroke-width="1.6"/><circle cx="12" cy="12" r="2" fill="#ffd76b"/></symbol>
+  <symbol id="hero-fist" viewBox="0 0 24 24"><g fill="#e9fff0" stroke="#e9fff0" stroke-width="1.3" stroke-linejoin="round"><rect x="6" y="10" width="12" height="8" rx="3"/><rect x="7.5" y="6.5" width="2.6" height="6" rx="1.3"/><rect x="10.7" y="5.3" width="2.6" height="7.2" rx="1.3"/><rect x="13.9" y="6" width="2.6" height="6.5" rx="1.3"/><path d="M6 13.5 3.3 12.2a1.4 1.4 0 0 1 1.2-2.5L6 10.5"/></g></symbol>
 </svg>
 
 <!-- ===== NAVBAR ===== -->
@@ -68,10 +72,10 @@
 <!-- ===== HERO ===== -->
 <section class="hero" id="topo">
   <div class="hero__decor" aria-hidden="true">
-    <span class="hero__fig hero__fig--1" title="Homem-Aranha">🕷️</span>
-    <span class="hero__fig hero__fig--2" title="Homem de Ferro">🤖</span>
-    <span class="hero__fig hero__fig--3" title="Capitão América">🛡️</span>
-    <span class="hero__fig hero__fig--4" title="Hulk">💪</span>
+    <span class="hero__fig hero__fig--1 hero__fig--spider" title="Homem-Aranha"><svg class="icon"><use href="#hero-spider"/></svg></span>
+    <span class="hero__fig hero__fig--2 hero__fig--iron" title="Homem de Ferro"><svg class="icon"><use href="#hero-arc"/></svg></span>
+    <span class="hero__fig hero__fig--3 hero__fig--cap" title="Capitão América"><svg class="icon"><use href="#hero-shield"/></svg></span>
+    <span class="hero__fig hero__fig--4 hero__fig--hulk" title="Hulk"><svg class="icon"><use href="#hero-fist"/></svg></span>
   </div>
 
   <div class="container hero__content">
