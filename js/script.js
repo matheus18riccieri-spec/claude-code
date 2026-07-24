@@ -198,6 +198,74 @@ function setupWordReveal() {
   }, 2500);
 }
 
+// ============ SECTION SCROLL ANIMATION ============
+function setupSectionReveal() {
+  const targets = document.querySelectorAll(".reveal");
+  if (!targets.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        } else {
+          // Leaving the viewport resets it, so scrolling back down
+          // triggers the fade-up again — keeps the page feeling alive.
+          entry.target.classList.remove("in-view");
+        }
+      });
+    },
+    { threshold: 0.12 },
+  );
+  targets.forEach((el) => observer.observe(el));
+}
+
+// ============ REVIEW FORM ============
+function setupReviewForm() {
+  const form = document.getElementById("reviewForm");
+  if (!form) return;
+
+  const stars = Array.from(document.querySelectorAll("#starRating .star"));
+  const notaInput = document.getElementById("notaInput");
+
+  function paintStars(value) {
+    stars.forEach((star) => {
+      star.classList.toggle("is-active", Number(star.dataset.value) <= value);
+    });
+  }
+  paintStars(5);
+
+  stars.forEach((star) => {
+    star.addEventListener("click", () => {
+      const value = Number(star.dataset.value);
+      notaInput.value = String(value);
+      paintStars(value);
+    });
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const nome = form.nome.value.trim();
+    const evento = form.evento.value.trim();
+    const nota = Number(notaInput.value);
+    const depoimento = form.depoimento.value.trim();
+    const starsText = "★".repeat(nota) + "☆".repeat(5 - nota);
+
+    const lines = [
+      "Novo depoimento pelo site da Anima Eventos:",
+      `Nome: ${nome}`,
+      evento ? `Evento: ${evento}` : null,
+      `Nota: ${starsText} (${nota}/5)`,
+      `Depoimento: ${depoimento}`,
+    ].filter(Boolean);
+
+    const message = encodeURIComponent(lines.join("\n"));
+    window.open(`https://wa.me/5567991041770?text=${message}`, "_blank", "noopener");
+    form.reset();
+    paintStars(5);
+  });
+}
+
 // ============ FOOTER YEAR ============
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
@@ -206,3 +274,5 @@ if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 buildPhotoGrids();
 buildCarousel();
 setupWordReveal();
+setupSectionReveal();
+setupReviewForm();
