@@ -69,3 +69,4 @@ Para trocar, edite os links `https://wa.me/...`, o endereço e o link do Instagr
 O `<iframe>` do Google Maps na seção de Contato não carrega em ambientes de teste sem
 acesso à internet (como sandboxes de CI), mas funciona normalmente em qualquer navegador
 com internet — é o formato padrão de embed do Google Maps sem necessidade de API key.
+
