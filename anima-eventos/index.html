@@ -360,6 +360,47 @@
         <footer><strong>Escola Aurora</strong><span>Formatura</span></footer>
       </blockquote>
     </div>
+
+    <div class="review-form-card">
+      <h3>Deixe seu depoimento</h3>
+      <p>Conte como foi sua experiência com a Anima Eventos — vamos adorar ler!</p>
+
+      <form id="reviewForm" class="review-form">
+        <div class="review-form__row">
+          <label>
+            <span>Seu nome</span>
+            <input type="text" name="nome" required />
+          </label>
+          <label>
+            <span>Tipo de evento</span>
+            <input type="text" name="evento" placeholder="Ex: casamento, 15 anos..." />
+          </label>
+        </div>
+
+        <div class="review-form__stars-block">
+          <span>Sua nota</span>
+          <div class="star-rating" id="starRating">
+            <button type="button" class="star" data-value="1" aria-label="1 estrela">★</button>
+            <button type="button" class="star" data-value="2" aria-label="2 estrelas">★</button>
+            <button type="button" class="star" data-value="3" aria-label="3 estrelas">★</button>
+            <button type="button" class="star" data-value="4" aria-label="4 estrelas">★</button>
+            <button type="button" class="star" data-value="5" aria-label="5 estrelas">★</button>
+          </div>
+          <input type="hidden" name="nota" id="notaInput" value="5" />
+        </div>
+
+        <label>
+          <span>Seu depoimento</span>
+          <textarea name="depoimento" rows="4" required placeholder="Conte como foi sua festa..."></textarea>
+        </label>
+
+        <button type="submit" class="btn btn--gold">
+          <svg class="icon"><use href="#icon-chat"/></svg>
+          Enviar depoimento pelo WhatsApp
+        </button>
+        <p class="review-form__hint">Ao enviar, o WhatsApp abre com sua mensagem pronta — é só confirmar.</p>
+      </form>
+    </div>
   </div>
 </section>
 
