@@ -483,6 +483,48 @@ a {
   font-size: 0.92rem;
 }
 
+/* ---------- Produtos ---------- */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 48px;
+}
+.product-chip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px 20px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.product-chip:hover {
+  transform: translateY(-4px);
+  border-color: var(--orange);
+}
+.product-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(240, 122, 46, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.product-icon svg {
+  width: 20px;
+  height: 20px;
+  color: var(--orange);
+}
+.product-chip span {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--cream);
+}
+
 /* ---------- Avaliações ---------- */
 .rating-panel {
   display: grid;
