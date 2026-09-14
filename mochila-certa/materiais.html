@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mochila Certa | Materiais</title>
+<meta name="description" content="Cadastre matérias e materiais escolares e associe cada material à matéria certa." />
+<meta name="theme-color" content="#6C5CE7" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎒</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+<script>
+(function () {
+  try {
+    var s = JSON.parse(localStorage.getItem('mc_settings') || '{}');
+    document.documentElement.setAttribute('data-theme', s.theme === 'dark' ? 'dark' : 'light');
+  } catch (e) {}
+})();
+</script>
+</head>
+<body data-page="materiais">
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <span class="brand"><span class="brand-emoji">🎒</span> Mochila Certa</span>
+    <span class="page-title">Materiais</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="tabs" role="tablist">
+    <button type="button" id="tabBtnSubjects" class="active" role="tab" aria-selected="true" aria-controls="panelSubjects">Matérias</button>
+    <button type="button" id="tabBtnMaterials" role="tab" aria-selected="false" aria-controls="panelMaterials">Catálogo de materiais</button>
+  </div>
+
+  <div id="panelSubjects" class="tab-panel" role="tabpanel">
+    <div id="subjectsRoot"></div>
+  </div>
+
+  <div id="panelMaterials" class="tab-panel" hidden role="tabpanel">
+    <div id="materialsRoot"></div>
+  </div>
+</main>
+
+<nav class="tabbar" aria-label="Navegação principal">
+  <a href="index.html" data-nav="dashboard"><span class="icon">🏠</span>Início</a>
+  <a href="grade.html" data-nav="grade"><span class="icon">🗓️</span>Grade</a>
+  <a href="materiais.html" data-nav="materiais"><span class="icon">🎒</span>Materiais</a>
+  <a href="config.html" data-nav="config"><span class="icon">⚙️</span>Config</a>
+</nav>
+
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+<script src="js/materiais.js"></script>
+</body>
+</html>
